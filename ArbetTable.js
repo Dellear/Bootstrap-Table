@@ -7,13 +7,13 @@
  */
 $(function () {
     //1.初始化Table
-    var oTable = new TableInit();
+    var oTable = tableInit();
     oTable.Init();
 });
 
 
-var TableInit = function () {
-    var oTableInit = new Object();
+var tableInit = function () {
+    var oTableInit = {};
     //初始化Table
     oTableInit.Init = function () {
         $('#ArbetTable').bootstrapTable({
@@ -44,13 +44,13 @@ var TableInit = function () {
             detailView: false,                   //是否显示父子表
             columns: [
             {
-                field: 'ID',
+                field: 'id',
                 title: 'ID'
             }, {
-                field: 'Name',
+                field: 'name',
                 title: '名字'
             }, {
-                field: 'Sex',
+                field: 'sex',
                 title: '性别'
             },
             {
@@ -76,7 +76,7 @@ var TableInit = function () {
 
     //得到查询的参数
     oTableInit.queryParams = function (params) {
-        var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+        var temp = {   //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
             limit: params.limit,   //页面大小
             //pageNumber: params.pageNumber,  //页码
             offset:params.offset

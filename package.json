@@ -1,4 +1,10 @@
 {
+  "name": "bootstrap-table-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Dellear/Bootstrap-Table.git",
+  "author": "wang <358009775@qq.com>",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-table": "^1.15.4",
